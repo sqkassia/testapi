@@ -1,0 +1,101 @@
+[
+  {
+    "uri": "features/specifications/Cadastro_Empregado.feature",
+    "id": "manter-o-cadastro-de-empregados-através-da-api",
+    "keyword": "Funcionalidade",
+    "name": "Manter o cadastro de Empregados através da API",
+    "description": "Como um aplicação de serviço\nQuero enviar requisições para o cadastro de Empregados\npara verificar se o cadastro funciona corretamente",
+    "line": 3,
+    "elements": [
+      {
+        "id": "manter-o-cadastro-de-empregados-através-da-api;consultar-empregado",
+        "keyword": "Cenario",
+        "name": "Consultar Empregado",
+        "description": "",
+        "line": 15,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@consultar",
+            "line": 14
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.29.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30700
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.29.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30100
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "a API Consultar Empregados definida",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/Cadastro_Empregado.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "é enviada a requisição para consultar o empregado",
+            "line": 17,
+            "output": [
+              "{\"status\":\"success\",\"data\":{\"name\":\"Roy\",\"salary\":1233.6199999999998908606357872486114501953125,\"age\":12,\"id\":1520},\"message\":\"Successfully! Record has been added.\"}"
+            ],
+            "match": {
+              "location": "features/step_definitions/Cadastro_Empregado.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5538712600
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "posso visualizar as informações retornadas",
+            "line": 18,
+            "output": [
+              "<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Too Many Requests</title><link rel=dns-prefetch href=//fonts.gstatic.com><link href=\"https://fonts.googleapis.com/css?family=Nunito\" rel=stylesheet><style>html,body{background-color:#fff;color:#636b6f;font-family:nunito,sans-serif;font-weight:100;height:100vh;margin:0}.full-height{height:100vh}.flex-center{align-items:center;display:flex;justify-content:center}.position-ref{position:relative}.code{border-right:2px solid;font-size:26px;padding:0 15px;text-align:center}.message{font-size:18px;text-align:center}</style></head><body><div class=\"flex-center position-ref full-height\"><div class=code>429</div><div class=message style=padding:10px>Too Many Requests</div></div></body></html>"
+            ],
+            "match": {
+              "location": "features/step_definitions/Cadastro_Empregado.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1112928300
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.29.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30100
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
